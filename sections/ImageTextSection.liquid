@@ -1,0 +1,92 @@
+{% schema %}
+{
+  "name": "Image + Text Section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#211e2a"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "NIKE - Just Do It"
+    },
+    {
+      "type": "textarea",
+      "id": "text_initial",
+      "label": "Initial text",
+      "default": "Nike is one of the most famous sportswear brands in the world. The company was founded in 1964 by Bill Bowerman and Phil Knight. Its iconic “swoosh” logo is recognized by people everywhere."
+    },
+    {
+      "type": "textarea",
+      "id": "text_hidden",
+      "label": "Hidden text",
+      "default": "Nike designs high-quality shoes, clothes, and accessories for athletes and everyday customers. The brand is also known for its powerful marketing campaigns and famous athletes like Michael Jordan."
+    },
+    {
+      "type": "select",
+      "id": "font_style",
+      "label": "Font style",
+      "options": [
+        { "value": "sans-serif", "label": "Sans Serif" },
+        { "value": "serif", "label": "Serif" },
+        { "value": "monospace", "label": "Monospace" }
+      ],
+      "default": "sans-serif"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "label": "Text size (px)",
+      "min": 12,
+      "max": 40,
+      "step": 1,
+      "default": 16
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Show more"
+    },
+    {
+      "type": "color",
+      "id": "button_background",
+      "label": "Button background color",
+      "default": "transparent"
+    },
+    {
+      "type": "color",
+      "id": "button_border_color",
+      "label": "Button border color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_color",
+      "label": "Button hover background color",
+      "default": "#555555"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_animation",
+      "label": "Enable fade-in animation",
+      "default": true
+    }
+  ]
+}
+{% endschema %}

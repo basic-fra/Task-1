@@ -1,0 +1,245 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+/* #c8b9b8
+  #97888d */
+
+/* === image-text-section === */
+.image-text-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #211e2a;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.image-text-section--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === Content === */
+.image-text-section__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; 
+  padding: 3rem;          
+}
+
+.image-text-section__content > h1 {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #c8b9b8;
+  padding-bottom: 1rem;
+}
+
+.image-text-section__text-initial {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #fff;
+  padding-bottom: 8px;
+} 
+
+/* === Text === */
+.image-text-section__text {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.image-text-section__text-hidden {
+  display: inline-block;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  vertical-align: top;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #fff;
+}
+
+/* === When Text is Visible === */
+.image-text-section__text--visible {
+  max-height: 500px;
+  opacity: 1;
+}
+
+/* === Toggle Button === */
+.image-text-section__button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.image-text-section__button {
+  margin-left: 0.5rem; 
+  padding: 0.5rem 1.5rem; 
+  background-color: #211e2a;
+  color: #fff;
+  border: 2px solid #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+ 
+.image-text-section__button:hover {
+  background-color: #555;
+}
+
+/* === Responsive === */
+@media only screen and (min-width: 200px) and (max-width: 399px) {
+  .image-text-section {
+    flex-direction: column;
+    height: 764px;
+  }
+
+  .image-text-section__image {
+    width: 100%;
+    height: 35%;
+  }
+
+  .image-text-section__text--visible {
+    font-size: 18px;
+  }
+
+  .image-text-section__text-initial {
+    font-size: 18px;
+  }
+
+  .image-text-section__content {
+    height: 75%;
+    padding: 2rem 3rem;
+  }
+
+  .image-text-section__content > h1 {
+    font-size: 21px;
+  }
+
+  .image-text-section__button {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 767px) {
+  .image-text-section {
+    height: 280px;
+  }
+  
+  .image-text-section__image {
+    width: 50%;
+    height: 100%;
+  }
+
+  .image-text-section__text--visible {
+    font-size: 10px;
+  }
+
+  .image-text-section__text-initial {
+    font-size: 10px;
+  }
+
+  .image-text-section__content {
+    padding: 2rem;  
+  }
+
+  .image-text-section__content > h1 {
+    font-size: 18px;
+  }
+
+  .image-text-section__button {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 999px) {
+  .image-text-section {
+    height: 350px;
+  }
+
+  .image-text-section__image {
+    width: 50%;
+    height: 100%;
+  }
+
+  .image-text-section__text--visible {
+    font-size: 16px;
+  }
+
+  .image-text-section__text-initial {
+    font-size: 14px;
+  }
+
+  .image-text-section__content > h1 {
+    font-size: 30px;
+  }
+
+  .image-text-section__button {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1439px) {
+  .image-text-section {
+    height: 450px;
+  }
+
+  .image-text-section__image {
+    width: 50%;
+    height: 100%;
+  }
+
+  .image-text-section__text--visible {
+    font-size: 16px;
+  }
+
+  .image-text-section__text-initial {
+    font-size: 16px;
+  }
+
+  .image-text-section__content > h1 {
+    font-size: 30px;
+  }
+
+  .image-text-section__button {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .image-text-section {
+    height: 576px;
+  }
+
+  .image-text-section__image {
+    width: 50%;
+    height: 100%;
+  }
+
+  .image-text-section__text--visible {
+    font-size: 20px;
+  }
+
+  .image-text-section__text-initial {
+    font-size: 20px;
+  }
+
+  .image-text-section__content > h1 {
+    font-size: 35px;
+  }
+
+  .image-text-section__button {
+    font-size: 15px;
+  }
+}
+
